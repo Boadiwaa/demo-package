@@ -1,0 +1,70 @@
+name: pytest-unit-tests
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  pytest:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+
+    env:
+      PYTHON_VERSION: "${{ matrix.python-version }}"
+      TESTS: "tests/"
+
+    strategy:
+      matrix:
+        name: [
+           python311-ubuntu2204,
+           python312-ubuntu2204,
+           python311-windows,
+           python312-windows
+        ]
+        include:
+        - name: python311-ubuntu2204
+          python-version: 3.11
+          os: ubuntu-22.04
+
+        - name: python312-ubuntu2204
+          python-version: 3.12
+          os: ubuntu-22.04
+
+        - name: python311-windows
+          python-version: 3.11
+          os: windows-latest
+
+        - name: python312-windows
+          python-version: 3.12
+          os: windows-latest
+
+    steps:
+    - name: Checkout acsefunctions
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    #- name: Install dependencies from conda
+      #run: |
+        #conda env create -f environment.yml
+        #conda activate my-environment
+
+    - name: Install dependencies
+      run: |
+        pip install -e .
+        pip install -r requirements.txt
+
+    - name: Test with pytest
+      env:
+          PYTHONPATH: ./acsefunctions
+      run: |
+        pytest
