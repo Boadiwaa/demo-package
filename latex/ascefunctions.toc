@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}ascefunctions}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}\sphinxstylestrong {Here are the functions in the taylors\_series module:}}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}\sphinxstylestrong {Here are the functions in the bessel\_group module:}}{3}{section.1.2}%
+\contentsline {chapter}{Python Module Index}{5}{section*.13}%
+\contentsline {chapter}{Index}{7}{section*.14}%

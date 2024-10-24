@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Package of Trigonometric and Bessel Functions &mdash; ascefunctions 0.10 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=ac14934e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            ascefunctions
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">My Package of Trigonometric and Bessel Functions</a><ul>
+<li><a class="reference internal" href="#ascefunctions">ascefunctions</a><ul>
+<li><a class="reference internal" href="#ascefunctions.taylors_series.trig_functions.cosh"><code class="docutils literal notranslate"><span class="pre">cosh()</span></code></a></li>
+<li><a class="reference internal" href="#ascefunctions.taylors_series.trig_functions.exp"><code class="docutils literal notranslate"><span class="pre">exp()</span></code></a></li>
+<li><a class="reference internal" href="#ascefunctions.taylors_series.trig_functions.sinh"><code class="docutils literal notranslate"><span class="pre">sinh()</span></code></a></li>
+<li><a class="reference internal" href="#ascefunctions.taylors_series.trig_functions.tanh"><code class="docutils literal notranslate"><span class="pre">tanh()</span></code></a></li>
+<li><a class="reference internal" href="#ascefunctions.bessel_group.bessel_function.bessel"><code class="docutils literal notranslate"><span class="pre">bessel()</span></code></a></li>
+<li><a class="reference internal" href="#ascefunctions.bessel_group.bessel_function.factorial"><code class="docutils literal notranslate"><span class="pre">factorial()</span></code></a></li>
+<li><a class="reference internal" href="#ascefunctions.bessel_group.bessel_function.gamma_function"><code class="docutils literal notranslate"><span class="pre">gamma_function()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">ascefunctions</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">My Package of Trigonometric and Bessel Functions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="my-package-of-trigonometric-and-bessel-functions">
+<h1>My Package of Trigonometric and Bessel Functions<a class="headerlink" href="#my-package-of-trigonometric-and-bessel-functions" title="Link to this heading"></a></h1>
+<section id="ascefunctions">
+<h2>ascefunctions<a class="headerlink" href="#ascefunctions" title="Link to this heading"></a></h2>
+<p>This package consists of 2 modules: taylors_series and bessel_group used for trigonometric
+and Bessel functions respectively, for use on <code class="xref py py-obj docutils literal notranslate"><span class="pre">scalar</span> <span class="pre">and</span> <span class="pre">numpy</span> <span class="pre">array</span></code> objects.
+The trigonometric functions were created using Taylors series. <a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> The Bessel function was implemented based on Euler’s definition. <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<p>For examples see <a class="reference internal" href="#ascefunctions.taylors_series.trig_functions.exp" title="ascefunctions.taylors_series.trig_functions.exp"><code class="xref py py-func docutils literal notranslate"><span class="pre">ascefunctions.taylors_series.trig_functions.exp()</span></code></a> and <a class="reference internal" href="#ascefunctions.taylors_series.trig_functions.sinh" title="ascefunctions.taylors_series.trig_functions.sinh"><code class="xref py py-func docutils literal notranslate"><span class="pre">ascefunctions.taylors_series.trig_functions.sinh()</span></code></a> for more information.</p>
+<p><strong>Here are the functions in the taylors_series module:</strong></p>
+<dl class="py function" id="module-ascefunctions.taylors_series.trig_functions">
+<span id="module-ascefunctions.taylors_series"></span><dt class="sig sig-object py" id="ascefunctions.taylors_series.trig_functions.cosh">
+<span class="sig-prename descclassname"><span class="pre">ascefunctions.taylors_series.trig_functions.</span></span><span class="sig-name descname"><span class="pre">cosh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ascefunctions.taylors_series.trig_functions.cosh" title="Link to this definition"></a></dt>
+<dd><p>Compute cosh(x) using Taylor series expansion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>np.array</strong> (<em>int</em><em> or </em><em>float</em><em> or </em><em>list</em><em> of </em><em>integers or</em>) – x: The input value for cosh(x). Can be a scalar or a numpy array.</p></li>
+<li><p><strong>int</strong> – <dl class="simple">
+<dt>terms: Number of terms in the Taylor series to consider</dt><dd><p>(higher = more accurate).</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Approximate value of cosh(x). Can be a scalar or a numpy array.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.float or np.array</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cosh</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">array(1.54308063)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cosh</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">])</span>
+<span class="go">array([ 1.54308063,  3.76219569, 10.067662  , 27.30823284, 74.20994852])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ascefunctions.taylors_series.trig_functions.exp">
+<span class="sig-prename descclassname"><span class="pre">ascefunctions.taylors_series.trig_functions.</span></span><span class="sig-name descname"><span class="pre">exp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ascefunctions.taylors_series.trig_functions.exp" title="Link to this definition"></a></dt>
+<dd><p>Compute e^x using Taylor series expansion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>np.array</strong> (<em>int</em><em> or </em><em>float</em><em> or </em><em>list</em><em> of </em><em>integers or</em>) – <p>x: The exponent value for e^x. Can be a scalar or a numpy array.
+terms: Number of terms in the Taylor series to consider</p>
+<blockquote>
+<div><p>(higher = more accurate).</p>
+</div></blockquote>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Approximate value of e^x. Can be a scalar or a numpy array.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.float or np.array</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exp</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="go">array(7.3890561)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">exp</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">])</span>
+<span class="go">array([ 2.71828183,  7.3890561 , 20.08553692])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ascefunctions.taylors_series.trig_functions.sinh">
+<span class="sig-prename descclassname"><span class="pre">ascefunctions.taylors_series.trig_functions.</span></span><span class="sig-name descname"><span class="pre">sinh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ascefunctions.taylors_series.trig_functions.sinh" title="Link to this definition"></a></dt>
+<dd><p>Compute sinh(x) using Taylor series expansion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>np.array</strong> (<em>int</em><em> or </em><em>float</em><em> or </em><em>list</em><em> of </em><em>integers or</em>) – x: The input value for sinh(x). Can be a scalar or a numpy array.</p></li>
+<li><p><strong>int</strong> – <dl class="simple">
+<dt>terms: Number of terms in the Taylor series to consider</dt><dd><p>(higher = more accurate).</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Approximate value of sinh(x). Can be a scalar or a numpy array.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.float or np.array</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sinh</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">terms</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="go">array(74.20321058)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sinh</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">])</span>
+<span class="go">array([ 1.17520119,  3.62686041, 10.01787493, 27.2899172 , 74.20321058])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ascefunctions.taylors_series.trig_functions.tanh">
+<span class="sig-prename descclassname"><span class="pre">ascefunctions.taylors_series.trig_functions.</span></span><span class="sig-name descname"><span class="pre">tanh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ascefunctions.taylors_series.trig_functions.tanh" title="Link to this definition"></a></dt>
+<dd><p>Compute tanh(x) using Taylor series expansion by
+dividing sinh(x) by cosh(x).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>np.array</strong> (<em>int</em><em> or </em><em>float</em><em> or </em><em>list</em><em> of </em><em>integers or</em>) – x: The input value for tanh(x). Can be a scalar or a numpy array.</p></li>
+<li><p><strong>int</strong> – <dl class="simple">
+<dt>terms: Number of terms in the Taylor series for sinh(x) and cosh(x)</dt><dd><p>to consider (higher = more accurate).</p>
+</dd>
+</dl>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Approximate value of tanh(x). Can be a scalar or a numpy array.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.float or np.array</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tanh</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">np.float64(0.7615941559557649)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tanh</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">])</span>
+<span class="go">array([0.76159416, 0.96402758, 0.99505475, 0.9993293 , 0.9999092 ])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<p class="rubric">References</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://mathworld.wolfram.com/TaylorSeries.html">https://mathworld.wolfram.com/TaylorSeries.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://mathworld.wolfram.com/BesselFunctionoftheFirstKind.html">https://mathworld.wolfram.com/BesselFunctionoftheFirstKind.html</a></p>
+</aside>
+</aside>
+<p><strong>Here are the functions in the bessel_group module:</strong></p>
+<dl class="py function" id="module-ascefunctions.bessel_group.bessel_function">
+<dt class="sig sig-object py" id="ascefunctions.bessel_group.bessel_function.bessel">
+<span class="sig-prename descclassname"><span class="pre">ascefunctions.bessel_group.bessel_function.</span></span><span class="sig-name descname"><span class="pre">bessel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ascefunctions.bessel_group.bessel_function.bessel" title="Link to this definition"></a></dt>
+<dd><p>Compute the bessel function for a scalar or numpy array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>np.array</strong> (<em>int</em><em> or </em><em>float</em><em> or </em><em>list</em><em> of </em><em>integers or</em>) – alpha: Order of the Bessel function.</p></li>
+<li><p><strong>np.array</strong> – x: Input value(s) at which to evaluate the Bessel function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Approximation of the Bessel function.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.float or np.array</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bessel_function</span><span class="p">(</span><span class="mi">1</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="go">array([ 0.        ,  0.4404682 ,  0.57755987,  0.34031109, -0.06437481,</span>
+<span class="go">       -0.32549533])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ascefunctions.bessel_group.bessel_function.factorial">
+<span class="sig-prename descclassname"><span class="pre">ascefunctions.bessel_group.bessel_function.</span></span><span class="sig-name descname"><span class="pre">factorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ascefunctions.bessel_group.bessel_function.factorial" title="Link to this definition"></a></dt>
+<dd><p>Compute factorial for a scalar or numpy array.
+:param int or float or list of integers or np.array: n: Input value(s) for which to compute the factorial.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Factorial of the input(s).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.float or np.array</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">factorial</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="go">array([  1.,   1.,   2.,   6.,  24., 120.])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ascefunctions.bessel_group.bessel_function.gamma_function">
+<span class="sig-prename descclassname"><span class="pre">ascefunctions.bessel_group.bessel_function.</span></span><span class="sig-name descname"><span class="pre">gamma_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ascefunctions.bessel_group.bessel_function.gamma_function" title="Link to this definition"></a></dt>
+<dd><p>Compute Gamma function for a scalar or numpy array.</p>
+<blockquote>
+<div><p>Parameters</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Gamma function value of the input(s).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>np.float or np.array</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">gamma_function</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="go">array([1.05088491, 0.87972523, 0.99916542, 1.32925696, 1.99999916,</span>
+<span class="go">       6.00000083])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Paulina Boadiwaa Mensah.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+name: acsepackageenvironment
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.8
+  - pip
+  - numpy>1.2
+  - flake8
+  - pytest
+  - pandas
+  - scipy
+  - matplotlib
+

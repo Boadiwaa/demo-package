@@ -1,0 +1,57 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter A
+  \item \spxentry{ascefunctions.bessel\_group.bessel\_function}
+    \subitem \spxentry{module}, \hyperpage{3}
+  \item \spxentry{ascefunctions.taylors\_series}
+    \subitem \spxentry{module}, \hyperpage{1}
+  \item \spxentry{ascefunctions.taylors\_series.trig\_functions}
+    \subitem \spxentry{module}, \hyperpage{1}
+
+  \indexspace
+  \bigletter B
+  \item \spxentry{bessel()}\spxextra{in module ascefunctions.bessel\_group.bessel\_function}, 
+		\hyperpage{3}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{cosh()}\spxextra{in module ascefunctions.taylors\_series.trig\_functions}, 
+		\hyperpage{1}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{exp()}\spxextra{in module ascefunctions.taylors\_series.trig\_functions}, 
+		\hyperpage{1}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{factorial()}\spxextra{in module ascefunctions.bessel\_group.bessel\_function}, 
+		\hyperpage{3}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{gamma\_function()}\spxextra{in module ascefunctions.bessel\_group.bessel\_function}, 
+		\hyperpage{3}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{module}
+    \subitem \spxentry{ascefunctions.bessel\_group.bessel\_function}, \hyperpage{3}
+    \subitem \spxentry{ascefunctions.taylors\_series}, \hyperpage{1}
+    \subitem \spxentry{ascefunctions.taylors\_series.trig\_functions}, \hyperpage{1}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{sinh()}\spxextra{in module ascefunctions.taylors\_series.trig\_functions}, 
+		\hyperpage{2}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{tanh()}\spxextra{in module ascefunctions.taylors\_series.trig\_functions}, 
+		\hyperpage{2}
+
+\end{sphinxtheindex}

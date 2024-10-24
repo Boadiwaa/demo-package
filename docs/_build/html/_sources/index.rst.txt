@@ -1,0 +1,40 @@
+.. ascefunctions documentation master file, created by
+   sphinx-quickstart on Thu Oct 17 10:21:00 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+My Package of Trigonometric and Bessel Functions
+*************************************************
+
+ascefunctions
+==============
+
+This package consists of 2 modules: taylors_series and bessel_group used for trigonometric 
+and Bessel functions respectively, for use on :obj:`scalar and numpy array` objects.
+The trigonometric functions were created using Taylors series. [1]_ The Bessel function was implemented based on Euler's definition. [2]_
+
+For examples see :func:`ascefunctions.taylors_series.trig_functions.exp()` and :func:`ascefunctions.taylors_series.trig_functions.sinh()` for more information.
+
+**Here are the functions in the taylors_series module:**
+
+.. automodule:: ascefunctions.taylors_series
+  :members: trig_functions
+
+.. automodule:: ascefunctions.taylors_series.trig_functions
+   :members: exp, sinh, cosh, tanh
+
+.. rubric:: References
+.. [1] https://mathworld.wolfram.com/TaylorSeries.html
+.. [2] https://mathworld.wolfram.com/BesselFunctionoftheFirstKind.html
+
+**Here are the functions in the bessel_group module:**
+
+.. automodule:: ascefunctions.bessel_group.bessel_function
+   :members: factorial, gamma_function, bessel
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   notebooks/jupyter_documentation
+

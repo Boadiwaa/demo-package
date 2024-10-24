@@ -1,0 +1,7 @@
+numpy>1.2
+flake8
+pytest
+pip
+pandas
+scipy
+matplotlib

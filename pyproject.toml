@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "ascefunctions" 
+version = "0.1.0"  
+description = "My Python Package for Calculating Trigonometry and Bessel Functions"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE.txt"}
+keywords = ["exp","sinh","cosh","tanh","gamma function", "bessel function"]
+authors = [
+    {name = "P. B. Mensah", email = "paulina.mensah24@imperial.ac.uk" }
+]
+maintainers = [
+    {name = "P. B. Mensah", email = "paulina.mensah24@imperial.ac.uk" }
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+  "numpy"
+]
+
