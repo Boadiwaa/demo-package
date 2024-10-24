@@ -1,0 +1,63 @@
+name: sphinx-autobuild
+
+permissions:
+  contents:
+    write
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  sphinx-autobuild:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+
+    env:
+      PYTHON_VERSION: "${{ matrix.python-version }}"
+
+    strategy:
+      matrix:
+        name: [
+           python311-ubuntu2004,
+           python312-ubuntu2204,
+           python311-windows
+        ]
+        include:
+        - name: python311-ubuntu2004
+          python-version: 3.11
+          os: ubuntu-20.04
+
+        - name: python312-ubuntu2204
+          python-version: 3.12
+          os: ubuntu-22.04
+
+        - name: python311-windows
+          python-version: 3.11
+          os: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+
+      - name: Install dependencies
+        run: |
+          pip install sphinx
+
+      - name: Build Sphinx Documentation
+        run: |
+          sphinx-build -M latexpdf docs .
+          
+
+      - name: Commit updated docs
+        if: github.event_name == 'push'  # Only commit on push events, not PRs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add latex/acsefunctions.pdf
+          git commit -m "Update LaTeX PDF documentation"
+          git push
