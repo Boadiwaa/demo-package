@@ -1,0 +1,60 @@
+name: flake8
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  flake8:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+
+    env:
+      PYTHON_VERSION: "${{ matrix.python-version }}"
+      
+    strategy:
+      matrix:
+        name: [
+           python311-ubuntu2204,
+           python312-ubuntu2204,
+           python311-windows,
+           python312-windows
+        ]
+        include:
+        - name: python311-ubuntu2204
+          python-version: 3.11
+          os: ubuntu-22.04
+
+        - name: python312-ubuntu2204
+          python-version: 3.12
+          os: ubuntu-22.04
+
+        - name: python311-windows
+          python-version: 3.11
+          os: windows-latest
+
+        - name: python312-windows
+          python-version: 3.12
+          os: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install flake8
+
+      - name: Run flake8 to check for code style compliance
+        run: |
+          flake8 .
